@@ -26,7 +26,7 @@ The app will feature input field and the button. After the user inputs name of t
 
 ![](https://i.imgur.com/rO3YOiZl.png)
 
-![](https://i.imgur.com/dIQ4YlWl.png)
+![](https://i.imgur.com/Cmx0eRKl.png)
 
 # Desktop
 
