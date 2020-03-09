@@ -1,0 +1,41 @@
+body {
+        margin: 0;
+}
+header {
+        width: 100%;
+        height: 75px;
+        background-color: #F7F73B;
+}
+h1 {
+        margin: 0;
+        text-align: center;
+}
+span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+}
+h3 {
+        margin: 0;
+}
+#weather p {
+        margin: 0;
+        font-family: Skia;
+        font-weight: light;
+    }
+
+.dress {
+        position: absolute;
+        left: -999px;
+        /* left: 4%; */
+        top: 25%;
+        margin-bottom: 20px;
+        height: 600px;
+        width: 90%;
+        background-color:#F2F0F0;
+}
+
+.show {
+        left: 4%;
+        transition: 1s;
+}
