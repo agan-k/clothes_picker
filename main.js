@@ -22,6 +22,7 @@ const dressThirteen = document.querySelector('.thirteen');
 const dressFourteen = document.querySelector('.fourteen');
 const dressFifteen = document.querySelector('.fifteen');
 const dressSixteen = document.querySelector('.sixteen');
+const dressSeventeen = document.querySelector('.seventeen');
 
 // ================================================
 // ================ landing page background =======
@@ -187,7 +188,7 @@ button.addEventListener('click', async () => {
                 dressSixteen.classList.add('show');
         } else if (temp > 90 && main == 'Clear') {
                 weatherCondition.classList.add('show');
-                dressSixteen.classList.add('show');
+                dressSeventeen.classList.add('show');
         }
         //debugger;
 });
