@@ -18,6 +18,11 @@ const dressNine = document.querySelector('.nine')
 const dressTen = document.querySelector('.ten');
 const dressEleven = document.querySelector('.eleven');
 const dressTwelve = document.querySelector('.twelve');
+const dressThirteen = document.querySelector('.thirteen');
+const dressFourteen = document.querySelector('.fourteen');
+const dressFifteen = document.querySelector('.fifteen');
+const dressSixteen = document.querySelector('.sixteen');
+
 // ================================================
 // ================ landing page background =======
 const background = document.querySelector('.background');
@@ -32,9 +37,9 @@ button.addEventListener('click', async () => {
 
         weatherCondition.innerHTML = `
         <h3>${response.data.name}<h3>
-        <p>Temperature: ${response.data.main.temp} Feels like: ${response.data.main.feels_like}</p>
-        <p>Wind:  ${response.data.wind.speed}mph
-        <p>${response.data.weather[0].main} </p>
+        <p><em>temperature:</em> <strong>${response.data.main.temp}</strong>°F  <em>feels like:</em> <strong>${response.data.main.feels_like}</strong>°F</p>
+        <p><em>wind:</em>   <strong>${response.data.wind.speed}</strong>mph
+        <p><strong>${response.data.weather[0].main}</strong></p>
         `
         let temp = response.data.main.temp;
         let main = response.data.weather[0].main;
@@ -62,84 +67,127 @@ button.addEventListener('click', async () => {
                 weatherCondition.classList.add('show');
                 dressThree.classList.add('show');
 
-        } else if (temp < 50 && main == 'Snow') {
+        } else if (temp < 40 && main == 'Snow') {
                 weatherCondition.classList.add('show');
                 dressFour.classList.add('show');
+        } else if (temp < 40 && main == 'Rain') {
+                weatherCondition.classList.add('show');
+                dressFive.classList.add('show');
+        } else if (temp < 40 && main == 'Thunderstorm') {
+                weatherCondition.classList.add('show');
+                dressFive.classList.add('show');
+        } else if (temp < 40 && main == 'Drizzle') {
+                weatherCondition.classList.add('show');
+                dressFive.classList.add('show');
+        } else if (temp < 40 && main == 'Clouds') {
+                weatherCondition.classList.add('show');
+                dressSix.classList.add('show');
+        } else if (temp < 40 && main == 'Fog') {
+                weatherCondition.classList.add('show');
+                dressSix.classList.add('show');
+        } else if (temp < 40 && main == 'Clear') {
+                weatherCondition.classList.add('show');
+                dressSix.classList.add('show');
+
+        } else if (temp < 50 && main == 'Snow') {
+                weatherCondition.classList.add('show');
+                dressSeven.classList.add('show');
         } else if (temp < 50 && main == 'Rain') {
                 weatherCondition.classList.add('show');
-                dressFive.classList.add('show');
+                dressEight.classList.add('show');
         } else if (temp < 50 && main == 'Thunderstorm') {
                 weatherCondition.classList.add('show');
-                dressFive.classList.add('show');
+                dressEight.classList.add('show');
         } else if (temp < 50 && main == 'Drizzle') {
                 weatherCondition.classList.add('show');
-                dressFive.classList.add('show');
+                dressEight.classList.add('show');
         } else if (temp < 50 && main == 'Clouds') {
                 weatherCondition.classList.add('show');
-                dressSix.classList.add('show');
+                dressNine.classList.add('show');
         } else if (temp < 50 && main == 'Fog') {
                 weatherCondition.classList.add('show');
-                dressSix.classList.add('show');
+                dressNine.classList.add('show');
         } else if (temp < 50 && main == 'Clear') {
                 weatherCondition.classList.add('show');
-                dressSix.classList.add('show');
+                dressNine.classList.add('show');
+
+
+        } else if (temp < 60 && main == 'Rain') {
+                weatherCondition.classList.add('show');
+                dressTen.classList.add('show');
+        } else if (temp < 60 && main == 'Thunderstorm') {
+                weatherCondition.classList.add('show');
+                dressTen.classList.add('show');
+        } else if (temp < 60 && main == 'Drizzle') {
+                weatherCondition.classList.add('show');
+                dressEleven.classList.add('show');
+        } else if (temp < 60 && main == 'Clouds') {
+                weatherCondition.classList.add('show');
+                dressTwelve.classList.add('show');
+        } else if (temp < 60 && main == 'Fog') {
+                weatherCondition.classList.add('show');
+                dressTwelve.classList.add('show');
+        } else if (temp < 60 && main.value == 'Clear') {
+                weatherCondition.classList.add('show');
+                dressTwelve.classList.add('show');
+
 
         } else if (temp < 70 && main == 'Rain') {
                 weatherCondition.classList.add('show');
-                dressSeven.classList.add('show');
+                dressThirteen.classList.add('show');
         } else if (temp < 70 && main == 'Thunderstorm') {
                 weatherCondition.classList.add('show');
-                dressSeven.classList.add('show');
+                dressThirteen.classList.add('show');
         } else if (temp < 70 && main == 'Drizzle') {
                 weatherCondition.classList.add('show');
-                dressSeven.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 70 && main == 'Clouds') {
                 weatherCondition.classList.add('show');
-                dressEight.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 70 && main == 'Fog') {
                 weatherCondition.classList.add('show');
-                dressEight.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 70 && main.value == 'Clear') {
                 weatherCondition.classList.add('show');
-                dressEight.classList.add('show');
+                dressFourteen.classList.add('show');
 
         } else if (temp < 80 && main == 'Rain') {
                 weatherCondition.classList.add('show');
-                dressNine.classList.add('show');
+                dressThirteen.classList.add('show');
         } else if (temp < 80 && main == 'Thunderstorm') {
                 weatherCondition.classList.add('show');
-                dressNine.classList.add('show');
+                dressThirteen.classList.add('show');
         } else if (temp < 80 && main == 'Drizzle') {
                 weatherCondition.classList.add('show');
-                dressNine.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 80 && main == 'Clouds') {
                 weatherCondition.classList.add('show');
-                dressTen.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 80 && main == 'Fog') {
                 weatherCondition.classList.add('show');
-                dressTen.classList.add('show');
+                dressFourteen.classList.add('show');
         } else if (temp < 80 && main == 'Clear') {
                 weatherCondition.classList.add('show');
-                dressTen.classList.add('show');
+                dressFourteen.classList.add('show');
 
         } else if (temp > 90 && main == 'Rain') {
                 weatherCondition.classList.add('show');
-                dressEleven.classList.add('show');
+                dressFifteen.classList.add('show');
         } else if (temp > 90 && main == 'Thunderstorm') {
                 weatherCondition.classList.add('show');
-                dressEleven.classList.add('show');
+                dressFifteen.classList.add('show');
         } else if (temp > 90 && main == 'Drizzle') {
                 weatherCondition.classList.add('show');
-                dressEleven.classList.add('show');
+                dressFifteen.classList.add('show');
         } else if (temp > 90 && main == 'Clouds') {
                 weatherCondition.classList.add('show');
-                dressTwelve.classList.add('show');
+                dressSixteen.classList.add('show');
         } else if (temp > 90 && main == 'Fog') {
                 weatherCondition.classList.add('show');
-                dressTwelve.classList.add('show');
+                dressSixteen.classList.add('show');
         } else if (temp > 90 && main == 'Clear') {
                 weatherCondition.classList.add('show');
-                dressTwelve.classList.add('show');
+                dressSixteen.classList.add('show');
         }
         //debugger;
 });
