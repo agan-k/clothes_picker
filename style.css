@@ -3,20 +3,20 @@ body {
         height: 90vh;
         background-color:#F2F0F0;
 }
+a{
+        text-decoration: none;
+}
 header {
         width: 100%;
         height: 75px;
         background-image: linear-gradient(to top,#E1E0B0 ,#F7FCB3);
-}
-header a {
-        text-decoration: none;
 }
 h1 {
         font-family: 'Monoton', cursive;
 
         font-size: 38px;
         text-transform: uppercase;
-        color: #97190A;
+        color:#97190A;
         margin: 0;
         padding-top: 10px;
         text-align: center;
@@ -44,8 +44,6 @@ span {
         font-size: 30px;
         font-style: italic;
         text-transform: lowercase;
-
-
 }
 main {
         background-color:#F2F0F0;
@@ -61,24 +59,30 @@ h3 p {
         letter-spacing: 1px;
 }
 .background {
-        height: 250px;      
+        height: 246px;      
 }
 .top {
         background-image: url(assets/kids_dressed/rain_kid.jpg);
         background-size: cover;
 }
-.middle{
+.middle {
         background-image: url(assets/kids_dressed/sun_kid.jpg);
         background-size: cover;
 }
-.bottom{
+.bottom {
         background-image: url(assets/kids_dressed/snow_kid.jpg);
         background-size: cover;
 }
+
+.user_input {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 160px;
+
+}
 input {
-        position: absolute;
-        top: 28%;
-        right: 30%;
         height: 50px;
         width: 144px;
         border: black 1px solid;
@@ -87,15 +91,11 @@ input {
 
 }
 button {
-        position: absolute;
-        top: 37%;
-        right: 30%;
-        height: 30px;
         background-color: grey;
         border: black 1px solid;
         border-radius: 5%;
-        height: 50px;
-        width: 150px;
+        height: 54px;
+        width: 147px;
         color: white;
         font-weight: bold;
         text-transform: uppercase;
@@ -122,7 +122,6 @@ button {
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
-        /* justify-content: flex-start; */
         
 }
 .dress {
@@ -132,7 +131,6 @@ button {
         margin-bottom: 20px;
         width: 100%;
         height: 800px;
-        
 }
 .dress img {
         text-align: center;
@@ -149,80 +147,125 @@ button {
         margin: 3% auto;
         background-color: white;
         box-shadow: 0 3px 6px;
-        /* keeps img centered */
+/* ===== keeps img centered ==== */
         text-align: center;
 }
 
 
 /* MEDIA QUERIES */
 
+/* ====== Tablet ======== */
 @media only screen and (min-width: 600px) {
-        .background {
-                height: 50vh;      
+
+        header {
+                height: 120px;
         }
-        .top {
-                background-image: url(assets/kids_dressed/rain_kid.jpg);
-                background-size: cover;
+        h1 {
+                font-size: 75px;
+                color: #97190A;
+                margin: 0;
+                padding-top: 7px;
+                text-align: center;
         }
-        .middle{
-                display: none;
-                background-image: url(assets/kids_dressed/sun_kid.jpg);
-                background-size: cover;
+        span {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
         }
-        .bottom{
-                background-image: url(assets/kids_dressed/snow_kid.jpg);
-                background-size: cover;
+        #last_minute {
+                top: 0;
+                letter-spacing: .5em;
+                font-size: 30px;
+        }
+        #for_kids{
+                position: absolute;
+                top: 70px;
+                font-size: 45px;
+        }
+        .user_input {
+                padding-top: 300px;
         }
         input {
-                top: 35%;
-                right: 36%;
-                height: 60px;
-                width: 220px;
+                height: 80px;
+                width: 280px;
+                font-size: 25px;
         }
         button {
-                top: 44%;
-                right: 36%;
-                height: 60px;
-                width: 220px;
+                height: 80px;
+                width: 280px;
+                font-size: 30px;
         }
-.image-container {
-                width: 200px;
-                height: 200px;
-                margin: 3% auto;
-                
-        } 
+        .background {
+                height: 452px;      
+        }
+        .bottom {
+                display: none;
+        }
+        .weather {
+                padding-top: 60px;
+                font-size: 28px;
+        }
+        .weather p {
+                line-height: 30px;
+        }
+        .dress {
+                top: 30%;
+                height: 550px;
+                padding-top: 3%;
+        }
+        .dress img {
+                text-align: center;
+                height: 60%;
+                margin: 15% auto;
+        }
+        .image-container {
+        width: 220px;
+        height: 220px;
+        margin: 1%;
+        }
+
 }
+
+/* ====== Desktop ======== */
 @media only screen and (min-width: 992px) {
-         
+
         .background {
-                height: 100vh;      
-        }
-        .top {
-                background-image: url(assets/kids_dressed/rain_kid.jpg);
-                background-size: cover;
-        }
-        .middle{
+                min-height: 100vh;
+        } 
+        .middle {
                 display: none;
-                background-image: url(assets/kids_dressed/sun_kid.jpg);
-                background-size: cover;
         }
-        .bottom{
+        .bottom {
                 display: none;
-                background-image: url(assets/kids_dressed/snow_kid.jpg);
-                background-size: cover;
-        }
-        input {
-                top: 58%;
-                right: 40%;
-                height: 60px;
-                width: 240px;
-        }
-        button {
-                top: 70%;
-                right: 40%;
-                height: 60px;
-                width: 240px;
         }
 
+        .weather {
+                top: 130px;
+                padding-top: 0;
+                font-size: 28px;
+        }
+        .weather p {
+                line-height: 30px;
+        }
+        .image-container {
+                width: 180px;
+                height: 180px;
+                margin: 1%;
+                
+                }
+        .dress {
+                        top: 35%;
+                        margin-bottom: 20px;
+                        width: 100%;
+                        height: 800px;
+                        padding-top: 3%;
+                }
+        .dress img {
+                        text-align: center;
+                        height: 60%;
+                        margin: 15% auto;
+                }        
 
-}
+ }              
+
+
